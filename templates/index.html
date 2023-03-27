@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Counter</h1>
+        <p>{{  session['counter'] }}</p>
+        <div class="button_row">
+            <form action="/add_visits" method="post">
+                <input type="hidden" name="count_inc" value="2">
+                <input id ="add_visits" type="submit" value="Add two visits">
+            </form>
+            <form action="/add_visits" method="post">
+                <label for="count_inc">Number to add to counter:</label>
+                <input type="number" name="count_inc" id="user_counter">
+                <input id="user_add_visits" type="submit" value="Add visits">
+
+            </form>
+            <form action="/destroy_session" method="get">
+                <input id="reset" type="submit" value="Reset">
+            </form>
+        </div>
+        <h1>Total user visits:</h1>
+        <p>{{  session['user_visits'] }}</p>
+    </div>
+</body>
+</html>

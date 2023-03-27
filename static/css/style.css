@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div#wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 20px;
+}
+
+div.button_row {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+input[type=submit] {
+    margin: 20px;
+    padding: 20px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 4px 4px gray;
+}
+
+input[type=submit]#add_visits {
+    background-color: coral;
+    color: white
+}
+
+input[type=submit]#reset {
+    background-color: darkcyan;
+    color: white;
+}
+
+input[type=number]#user_counter {
+    width: 100px;
+}
