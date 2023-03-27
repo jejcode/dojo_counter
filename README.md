@@ -4,9 +4,10 @@
 How to decode a cookie:
 open python shell
 First import:
->> import base64
+import base64
+
 Then run this command:
->> base64.urlsafe_b64decode('date_from_cookie_up_to_but_not_including_.')
+base64.urlsafe_b64decode('date_from_cookie_up_to_but_not_including_.')
 
 Returns:
 b'{"key":value}'
